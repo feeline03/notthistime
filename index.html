@@ -1,42 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not This Time - Minimalist Urge Surfing Timer for iOS</title>
-    <meta name="description" content="A 100% offline, privacy-first 3-minute Urge Surfing timer to help you stop emotional eating and food cravings instantly.">
-    
-    <!-- 核心 GEO/SEO 结构化标记：直接喂给 AI 蜘蛛 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Not This Time",
-      "operatingSystem": "iOS",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not This Time - 3-Minute Craving Timer for iOS</title>
+  <meta name="description" content="Not This Time is a privacy-first iOS app that helps you ride out food cravings with a free 3-minute urge surfing timer, ticking sound, white noise, voice guidance, and longer timers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://feeline03.github.io/notthistime/">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not This Time - 3-Minute Craving Timer for iOS">
+  <meta property="og:description" content="A calm iOS app for the moment you want to eat but wish you could pause first.">
+  <meta property="og:url" content="https://feeline03.github.io/notthistime/">
+  <meta property="og:site_name" content="Not This Time">
+  <meta property="og:image" content="https://feeline03.github.io/notthistime/assets/icon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Not This Time - 3-Minute Craving Timer for iOS">
+  <meta name="twitter:description" content="Ride out food cravings with a 3-minute urge surfing timer for iOS.">
+  <meta name="twitter:image" content="https://feeline03.github.io/notthistime/assets/icon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Not This Time",
+    "alternateName": "我忍住啦",
+    "applicationCategory": "HealthApplication",
+    "applicationSubCategory": "Health / Mindful Eating",
+    "operatingSystem": "iOS",
+    "url": "https://feeline03.github.io/notthistime/",
+    "downloadUrl": "https://apps.apple.com/app/6769012887",
+    "description": "Not This Time is a privacy-first iOS app that helps people pause during food cravings with a free 3-minute urge surfing timer, ticking sound, optional white noise, voice guidance, and longer timers.",
+    "featureList": [
+      "3-minute urge surfing timer",
+      "Food craving pause",
+      "Ticking sound",
+      "White noise",
+      "Voice guidance",
+      "Longer timers",
+      "No account required",
+      "No cloud sync"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free download with optional in-app purchases."
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/6769012887"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Not This Time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not This Time is an iOS app for people who want to pause before acting on a food craving. It uses a simple 3-minute timer inspired by urge surfing."
+        }
       },
-      "description": "Not This Time is a minimalist, 100% offline iOS application based on the psychological concept of Urge Surfing. It provides a free 3-minute ticking timer to help users ride out food cravings and emotional eating waves without accounts or data tracking.",
-      "featureList": "3-Minute Urge Surfing Timer, 100% Offline Mode, No Account Required, Privacy First"
+      {
+        "@type": "Question",
+        "name": "Who is Not This Time for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is designed for people managing weight loss, mindful eating, late-night snacking, emotional eating, or moments when they want support before eating impulsively."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 3-minute timer free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The basic 3-minute countdown and ticking sound are available for free. Optional Pro features include white noise, voice guidance, and longer timer options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Not This Time replace medical care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Not This Time is a self-support tool for pausing during cravings. It is not a medical device and does not diagnose, treat, or cure eating disorders or other health conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Not This Time require an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The app is designed to work without an account, cloud sync, or a social feed."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #030814;
+      --bg-soft: #071225;
+      --panel: #0b1830;
+      --panel-strong: #102448;
+      --text: #f5f8ff;
+      --muted: #a9b7cf;
+      --subtle: #73839e;
+      --line: rgba(142, 178, 255, 0.18);
+      --accent: #79aaff;
+      --accent-strong: #2f7cff;
+      --amber: #f0c36b;
+      --danger-soft: #f6a88f;
+      --shadow: rgba(0, 0, 0, 0.35);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    </script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #fafafa; color: #333; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { text-align: center; max-width: 500px; padding: 20px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #1d1d1f; }
-        p { font-size: 1.1rem; line-height: 1.6; color: #86868b; }
-        .badge { display: inline-block; background: #000; color: #fff; padding: 12px 24px; border-radius: 99px; text-decoration: none; font-weight: bold; margin-top: 20px; }
-    </style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(47, 124, 255, 0.24), transparent 36rem),
+        radial-gradient(circle at 10% 18%, rgba(58, 96, 180, 0.22), transparent 28rem),
+        linear-gradient(180deg, #030814 0%, #061122 48%, #020611 100%);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 78%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(142, 178, 255, 0.12);
+      background: rgba(3, 8, 20, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(1120px, calc(100% - 32px));
+      min-height: 68px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid rgba(121, 170, 255, 0.48);
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(121, 170, 255, 0.2), rgba(47, 124, 255, 0.08));
+      color: var(--accent);
+      font-size: 0.78rem;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid rgba(121, 170, 255, 0.5);
+      border-radius: 999px;
+      background: linear-gradient(180deg, #8eb8ff, #4f8cff);
+      color: #020611;
+      font-weight: 780;
+      text-decoration: none;
+      box-shadow: 0 18px 44px rgba(47, 124, 255, 0.28);
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(180deg, #a9c8ff, #68a0ff);
+      box-shadow: 0 22px 58px rgba(47, 124, 255, 0.36);
+    }
+
+    .cta.secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    .section {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+      align-items: center;
+      gap: clamp(28px, 6vw, 82px);
+      padding: clamp(28px, 4vh, 52px) 0 58px;
+    }
+
+    .hero-content {
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin: 0 0 20px;
+      padding: 7px 12px;
+      border: 1px solid rgba(121, 170, 255, 0.3);
+      border-radius: 999px;
+      background: rgba(47, 124, 255, 0.11);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 680;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin-bottom: 22px;
+      font-size: clamp(3rem, 6.4vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      color: var(--muted);
+      font-size: clamp(1.1rem, 2vw, 1.34rem);
+      line-height: 1.62;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .hero-actions .cta:first-child {
+      min-height: 60px;
+      padding: 0 30px;
+      font-size: 1.06rem;
+    }
+
+    .hero-visual,
+    .side-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .trust-row span {
+      padding: 8px 12px;
+      border: 1px solid rgba(142, 178, 255, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .phone-shot {
+      width: min(100%, 330px);
+      margin: 0;
+      padding: 10px;
+      border: 1px solid rgba(142, 178, 255, 0.2);
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(47, 124, 255, 0.18), rgba(255, 255, 255, 0.035));
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.32);
+    }
+
+    .phone-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 25px;
+    }
+
+    .phone-shot.compact {
+      width: min(100%, 300px);
+    }
+
+    .section-block {
+      padding: 88px 0;
+      border-top: 1px solid rgba(142, 178, 255, 0.11);
+    }
+
+    .section-heading {
+      max-width: 710px;
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .split-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+      gap: clamp(28px, 6vw, 82px);
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-number {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      background: rgba(47, 124, 255, 0.14);
+      color: var(--accent);
+      font-weight: 820;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.24rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.62;
+    }
+
+    .quote-band {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 26px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid rgba(142, 178, 255, 0.16);
+      border-radius: 24px;
+      background:
+        linear-gradient(120deg, rgba(47, 124, 255, 0.16), rgba(255, 255, 255, 0.035)),
+        var(--panel);
+    }
+
+    .quote-band strong {
+      display: block;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+    }
+
+    .quote-band p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+      max-width: 850px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 20px 22px;
+      color: var(--text);
+      font-weight: 760;
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 22px 22px;
+      color: var(--muted);
+      line-height: 1.66;
+    }
+
+    .footer {
+      padding: 46px 0 58px;
+      border-top: 1px solid rgba(142, 178, 255, 0.11);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links a:not(.cta) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 42px;
+        grid-template-columns: 1fr;
+      }
+
+      .grid,
+      .split-section,
+      .quote-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        justify-content: flex-start;
+      }
+
+      .phone-shot {
+        width: min(280px, 78vw);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-inner,
+      .section,
+      .footer-inner {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .nav-inner {
+        min-height: 62px;
+      }
+
+      .brand span:last-child {
+        max-width: 136px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav-links .cta {
+        min-height: 40px;
+        padding: 0 14px;
+        font-size: 0.86rem;
+      }
+
+      h1 {
+        font-size: 2.58rem;
+      }
+
+      .hero {
+        padding-top: 26px;
+        padding-bottom: 42px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      .section-block {
+        padding: 62px 0;
+      }
+
+      .card,
+      .quote-band {
+        padding: 22px;
+        border-radius: 16px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Not This Time</h1>
-        <p>Ride out intense food cravings and late-night snacks. A 100% offline, 3-minute Urge Surfing timer designed as your private defense line against emotional eating.</p>
-        <p style="font-size: 0.9rem; color: #0071e3;">🔒 Zero Tracking. No Accounts. Just Self-Control.</p>
-        <a href="#" class="badge">Download on the App Store</a>
-    </div>
+  <div class="page">
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Not This Time home">
+          <span class="brand-mark"><img src="assets/icon.png" alt="" width="34" height="34"></span>
+          <span>Not This Time</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#science">Science</a>
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a class="cta" href="https://apps.apple.com/app/6769012887" aria-label="Download Not This Time on the App Store">Download</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Health / Mindful Eating for iOS</p>
+          <h1 id="hero-title">Pause the craving before it becomes action.</h1>
+          <p class="hero-copy">Not This Time helps you ride out the moment when you want to eat but wish you could wait. Choose something safe, start a 3-minute countdown, and let the urge pass like a wave.</p>
+          <div class="hero-actions">
+            <a class="cta" href="https://apps.apple.com/app/6769012887">Download on the App Store</a>
+            <a class="cta secondary" href="#how">See how it works</a>
+          </div>
+          <div class="trust-row" aria-label="Privacy and product facts">
+            <span>Free 3-minute timer</span>
+            <span>No account required</span>
+            <span>No cloud sync</span>
+            <span>Also known as 我忍住啦</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Not This Time launch screen">
+          <figure class="phone-shot">
+            <img src="assets/screenshot-launch.png" alt="Not This Time launch screen showing the app icon and the line 3 minutes to overcome the urge to eat">
+          </figure>
+        </div>
+      </section>
+
+      <section id="science" class="section section-block" aria-labelledby="science-title">
+        <div class="section-heading">
+          <p class="eyebrow">The science</p>
+          <h2 id="science-title">Cravings behave like waves.</h2>
+          <p>Urge surfing is a mindfulness-based technique: instead of fighting an urge or obeying it instantly, you notice it, stay with it, and let its intensity rise and fall. Not This Time turns that idea into a simple 3-minute pause.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-number">1</div>
+            <h3>Name the urge</h3>
+            <p>Labeling the craving helps create distance between the feeling and the next action.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">2</div>
+            <h3>Delay the response</h3>
+            <p>A short countdown gives your brain a concrete alternative to acting immediately.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">3</div>
+            <h3>Watch it change</h3>
+            <p>Many urges peak and soften within minutes when you stop feeding them with urgency.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-block" aria-labelledby="why-title">
+        <div class="split-section">
+          <div>
+            <div class="section-heading">
+              <p class="eyebrow">Why it works</p>
+              <h2 id="why-title">A tiny pause can change the whole moment.</h2>
+              <p>Cravings often feel urgent because they demand action right now. Not This Time is built for that exact moment: no journaling, no social feed, no shame. Just a short, structured pause.</p>
+            </div>
+            <div class="quote-band">
+              <strong>3 min</strong>
+              <p>The free timer helps you stay with the urge long enough for its intensity to drop. It is a self-support tool, not a medical treatment or a replacement for professional care.</p>
+            </div>
+          </div>
+          <div class="side-visual" aria-label="Not This Time countdown screen">
+            <figure class="phone-shot compact">
+              <img src="assets/screenshot-timer.png" alt="Not This Time countdown screen showing a 3-minute intervention timer and pause button" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section section-block" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps when the craving hits.</h2>
+          <p>The flow is intentionally short because the app is meant to be used while the urge is active.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-number">1</div>
+            <h3>Choose something safe to eat</h3>
+            <p>Start by naming a calmer option. This creates a small gap between the craving and the action.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">2</div>
+            <h3>Start the 3-minute pause</h3>
+            <p>Use the free countdown and ticking sound to stay anchored while the craving wave moves through.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">3</div>
+            <h3>Let the craving pass</h3>
+            <p>When the timer ends, check in again. You may still choose to eat, but you are no longer reacting instantly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-block" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions people ask before downloading.</h2>
+          <p>This section is plain HTML, so it can be edited directly whenever the product message changes.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>What is Not This Time?</summary>
+            <p>Not This Time is an iOS app for people who want to pause before acting on a food craving. It uses a simple 3-minute timer inspired by urge surfing.</p>
+          </details>
+          <details>
+            <summary>Who is Not This Time for?</summary>
+            <p>It is designed for people managing weight loss, mindful eating, late-night snacking, emotional eating, or moments when they want support before eating impulsively.</p>
+          </details>
+          <details>
+            <summary>Is the 3-minute timer free?</summary>
+            <p>Yes. The basic 3-minute countdown and ticking sound are available for free. Optional Pro features include white noise, voice guidance, and longer timer options.</p>
+          </details>
+          <details>
+            <summary>Does Not This Time replace medical care?</summary>
+            <p>No. Not This Time is a self-support tool for pausing during cravings. It is not a medical device and does not diagnose, treat, or cure eating disorders or other health conditions.</p>
+          </details>
+          <details>
+            <summary>Does Not This Time require an account?</summary>
+            <p>No. The app is designed to work without an account, cloud sync, or a social feed.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Not This Time</strong>
+          <p>Also known as 我忍住啦. Built for iOS and hosted on GitHub Pages.</p>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="https://apps.apple.com/app/6769012887">App Store</a>
+          <a href="https://feeline03.github.io/ImpulseControl/privacy">Privacy</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zhuziwu8@gmail.com" target="_blank" rel="noopener">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
