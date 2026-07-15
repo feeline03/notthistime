@@ -18,7 +18,12 @@
                 <h1 class="text-3xl font-bold text-slate-800 tracking-tight">Not This Time</h1>
                 <p class="text-slate-500 mt-1">Real-time Conversion Analytics</p>
             </div>
-            <div class="text-sm text-slate-400" id="lastUpdated">Last updated: --</div>
+            <div class="flex items-center space-x-4">
+                <input type="date" id="startDate" class="border rounded p-2 text-sm text-slate-600 bg-white" onchange="fetchData()">
+                <span class="text-slate-400">to</span>
+                <input type="date" id="endDate" class="border rounded p-2 text-sm text-slate-600 bg-white" onchange="fetchData()">
+                <div class="text-sm text-slate-400 ml-4" id="lastUpdated">Last updated: --</div>
+            </div>
         </header>
 
         <!-- KPI Grid -->
@@ -69,7 +74,19 @@
 
         async function fetchData() {
             try {
-                const response = await fetch(API_URL);
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+                
+                let url = API_URL;
+                const params = new URLSearchParams();
+                if (startDate) params.append('startDate', startDate);
+                if (endDate) params.append('endDate', endDate);
+                
+                if (params.toString()) {
+                    url += '?' + params.toString();
+                }
+                
+                const response = await fetch(url);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 updateUI(data);
@@ -81,6 +98,12 @@
                     proUsers: 120,
                     funnel: {
                         app_launch: 1542,
+                        view_home: 1400,
+                        view_food_page: 1300,
+                        view_countdown_page: 1200,
+                        intervention_complete: 1000,
+                        view_feedback_page: 950,
+                        view_result_page: 900,
                         paywall_view: 850,
                         paywall_purchase_click: 310,
                         paywall_purchase_success: 120
@@ -107,20 +130,32 @@
             funnelChartInstance = new Chart(ctxFunnel, {
                 type: 'bar',
                 data: {
-                    labels: ['Launch', 'Paywall View', 'Purchase Click', 'Success'],
+                    labels: ['Launch', 'Home', 'Food', 'Countdown', 'Complete', 'Feedback', 'Result', 'Paywall', 'Paywall Click', 'Success'],
                     datasets: [{
                         label: 'Users',
                         data: [
-                            data.funnel.app_launch,
-                            data.funnel.paywall_view,
-                            data.funnel.paywall_purchase_click,
-                            data.funnel.paywall_purchase_success
+                            data.funnel.app_launch || 0,
+                            data.funnel.view_home || 0,
+                            data.funnel.view_food_page || 0,
+                            data.funnel.view_countdown_page || 0,
+                            data.funnel.intervention_complete || 0,
+                            data.funnel.view_feedback_page || 0,
+                            data.funnel.view_result_page || 0,
+                            data.funnel.paywall_view || 0,
+                            data.funnel.paywall_purchase_click || 0,
+                            data.funnel.paywall_purchase_success || 0
                         ],
                         backgroundColor: [
-                            'rgba(148, 163, 184, 0.5)',
-                            'rgba(96, 165, 250, 0.5)',
-                            'rgba(59, 130, 246, 0.8)',
-                            'rgba(245, 158, 11, 0.8)'
+                            'rgba(148, 163, 184, 0.5)', // Launch
+                            'rgba(148, 163, 184, 0.6)', // Home
+                            'rgba(148, 163, 184, 0.7)', // Food
+                            'rgba(96, 165, 250, 0.5)',  // Countdown
+                            'rgba(96, 165, 250, 0.6)',  // Complete
+                            'rgba(96, 165, 250, 0.7)',  // Feedback
+                            'rgba(96, 165, 250, 0.8)',  // Result
+                            'rgba(59, 130, 246, 0.8)',  // Paywall
+                            'rgba(245, 158, 11, 0.7)',  // Paywall Click
+                            'rgba(245, 158, 11, 1.0)'   // Success
                         ],
                         borderWidth: 0,
                         borderRadius: 6
