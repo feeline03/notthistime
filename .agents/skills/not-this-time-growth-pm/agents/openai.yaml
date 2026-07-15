@@ -1,0 +1,4 @@
+interface:
+  display_name: "Not This Time Growth PM"
+  short_description: "Growth PM workflow for Not This Time"
+  default_prompt: "Use $not-this-time-growth-pm to diagnose this week's app growth data and create a focused experiment plan."
