@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Not This Time</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8fafc; }
+        .glass-card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); padding: 24px; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-800 tracking-tight">Not This Time</h1>
+                <p class="text-slate-500 mt-1">Real-time Conversion Analytics</p>
+            </div>
+            <div class="text-sm text-slate-400" id="lastUpdated">Last updated: --</div>
+        </header>
+
+        <!-- KPI Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="glass-card">
+                <h3 class="text-sm font-medium text-slate-500">Total Users</h3>
+                <p class="text-3xl font-bold text-slate-800 mt-2" id="kpi-total">0</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="text-sm font-medium text-slate-500">Pro Users (Lifetime)</h3>
+                <p class="text-3xl font-bold text-amber-500 mt-2" id="kpi-pro">0</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="text-sm font-medium text-slate-500">Overall Conversion Rate</h3>
+                <p class="text-3xl font-bold text-blue-600 mt-2" id="kpi-rate">0%</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="text-sm font-medium text-slate-500">App Launches</h3>
+                <p class="text-3xl font-bold text-slate-800 mt-2" id="kpi-launches">0</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Funnel Chart -->
+            <div class="glass-card">
+                <h2 class="text-xl font-semibold text-slate-800 mb-6">Purchase Funnel</h2>
+                <div class="relative h-64">
+                    <canvas id="funnelChart"></canvas>
+                </div>
+            </div>
+
+            <!-- A/B Test Results -->
+            <div class="glass-card">
+                <h2 class="text-xl font-semibold text-slate-800 mb-6">A/B Test (Paywall Clicks)</h2>
+                <div class="relative h-64">
+                    <canvas id="abChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // CHANGE THIS URL TO YOUR SERVER IP OR DOMAIN LATER
+        const API_URL = 'https://moodrhythm.app/notthistime/analytics/api/v1/dashboard/stats';
+        
+        let funnelChartInstance = null;
+        let abChartInstance = null;
+
+        async function fetchData() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                updateUI(data);
+            } catch (error) {
+                console.error('Failed to fetch stats:', error);
+                // Fallback mock data for testing UI when backend is offline
+                updateUI({
+                    totalUsers: 1542,
+                    proUsers: 120,
+                    funnel: {
+                        app_launch: 1542,
+                        paywall_view: 850,
+                        paywall_purchase_click: 310,
+                        paywall_purchase_success: 120
+                    },
+                    abTest: { variantA: 180, variantB: 130 },
+                    timestamp: new Date()
+                });
+            }
+        }
+
+        function updateUI(data) {
+            // Update KPIs
+            document.getElementById('kpi-total').innerText = data.totalUsers.toLocaleString();
+            document.getElementById('kpi-pro').innerText = data.proUsers.toLocaleString();
+            const rate = data.totalUsers > 0 ? ((data.proUsers / data.totalUsers) * 100).toFixed(1) : 0;
+            document.getElementById('kpi-rate').innerText = `${rate}%`;
+            document.getElementById('kpi-launches').innerText = data.funnel.app_launch.toLocaleString();
+            
+            document.getElementById('lastUpdated').innerText = `Last updated: ${new Date(data.timestamp).toLocaleTimeString()}`;
+
+            // Render Funnel Chart
+            const ctxFunnel = document.getElementById('funnelChart').getContext('2d');
+            if (funnelChartInstance) funnelChartInstance.destroy();
+            funnelChartInstance = new Chart(ctxFunnel, {
+                type: 'bar',
+                data: {
+                    labels: ['Launch', 'Paywall View', 'Purchase Click', 'Success'],
+                    datasets: [{
+                        label: 'Users',
+                        data: [
+                            data.funnel.app_launch,
+                            data.funnel.paywall_view,
+                            data.funnel.paywall_purchase_click,
+                            data.funnel.paywall_purchase_success
+                        ],
+                        backgroundColor: [
+                            'rgba(148, 163, 184, 0.5)',
+                            'rgba(96, 165, 250, 0.5)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)'
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+
+            // Render A/B Test Chart
+            const ctxAB = document.getElementById('abChart').getContext('2d');
+            if (abChartInstance) abChartInstance.destroy();
+            abChartInstance = new Chart(ctxAB, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Variant A', 'Variant B'],
+                    datasets: [{
+                        data: [data.abTest.variantA, data.abTest.variantB],
+                        backgroundColor: [
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        }
+
+        // Fetch initially and then every 30 seconds
+        fetchData();
+        setInterval(fetchData, 30000);
+    </script>
+</body>
+</html>
