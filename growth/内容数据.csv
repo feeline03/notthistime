@@ -1,2 +1,119 @@
-发布日期,平台,账号,语言,内容形式,内容主题,Hook,链接,曝光或播放,点赞,评论,收藏,转发,主页访问,AppStore点击,下载归因,用户原话,结论,下一步动作
-历史,,,"中文",短视频,"小红书/抖音早期测试",,,,"",3,,,,,,"有3个评论区咨询，但流量低且无明确下载","有咨询信号，但样本太小","后续按角度分组记录，不要只记录总数"
+﻿发布日期,平台,内容ID,场景,产品角色,screen text,Instagram Reels caption,Instagram comment prompt,TikTok caption,TikTok comment prompt,曝光或播放,点赞,评论,收藏,转发,2 秒停留率,5 秒留存率,平均观看时长,关注,AppStore点击,下载归因,用户评论,,
+历史,,,,,,,,,,,,,,,,,,,,,有3个评论区咨询，但流量低且无明确下载,,
+2026/08/04,instagram,NTTC-B12,等 3 分钟后过去了,不提产品,I thought I had to eat it. Then three minutes passed.,,,Have you ever waited and watched the craving get quieter?,,1715/1119,4,0,0,0,,,7s,0,,,,,
+2026/08/04,tiktok,NTTC-B12,等 3 分钟后过去了,不提产品,I thought I had to eat it. Then three minutes passed.,,,Have you ever waited and watched the craving get quieter?,,1341,10,1,2,0,,,6.99s,1,,,,,
+2026/08/05,tiktok,self-R00,情绪（无聊）,不提产品,"I'm full of so much emotion I just don't know how to express it then, to eat!",,,,,101,1,0,1,0,,,3.03s,,,,,,
+2026/08/05,instagram,self-R00,情绪（无聊）,不提产品,"I'm full of so much emotion I just don't know how to express it then, to eat!",,,,,171/148,2,0,0,0,,,4s,,,,,,
+2026/08/08,instagram,self-R01,情绪（无聊）,不提产品,"me eating not
+because im hungry but
+cause my mouth is bored",,,,"After dinner and before bed, I get bored, and on weekends when I'm watching TV shows, I get so bored that I feel like eating.",1041/931,32,0,1,3,,,4s,,,,,,
+2026/08/08,tiktok,self-R01,情绪（无聊）,不提产品,"me eating not
+because im hungry but
+cause my mouth is bored",,,,,168,8,0,0,2,,,3.15s,,,,,,
+2026/08/09,instagram,self-R02,夜里,不提产品,Me trying to sleep but Ihave snacks in the fridge,,,,,298/260,5,0,0,2,,,4s,,,,,,
+2026/08/09,tiktok,self-R02,夜里,不提产品,Me trying to sleep but Ihave snacks in the fridge,Me trying to sleep but Ihave snacks in the fridge,,,,102,5,0,0,2,,,3s,,,,,,
+2026/08/08,instagram,self-R03,夜里,不提产品,Pov:you've been eatingclean all day and then8pm hits,cravings are in high gear,,,,441/387,4,0,0,0,,,4s,,,,,,
+2026/08/08,tiktok,self-R05,夜里,不提产品,Pov:you've been eatingclean all day and then8pm hits,cravings are in high gear,,,,244,8,0,0,0,,,5.28s,,,,,,
+2026/08/10,instagram,self-R05,夜里,不提产品,"You should walk after eating
+Me after I eat",,,,,1273/1098,19,0,0,18,,,4s,,,,,,
+2026/08/10,tiktok,self-R05,夜里,不提产品,"You should walk after eating
+Me after I eat","Please tell me I'm not the only one?Thankfull I'm learning that consistency is about progress, not perfection. Bolt pharmacy has been helping me stay on track.",,,,107,3,0,0,0,,,2.93s,,,,,,
+2026/08/09,instagram,self-R04,情绪（无聊）,不提产品,"Me 5 minutes after
+complaining about my body",anyone?,,,,290/221,3,0,0,1,,,3s,,,,,,
+2026/08/09,tiktok,self-R04,情绪（无聊）,不提产品,"Me 5 minutes after
+complaining about my body",anyone?,,,,110,1,0,0,0,,,3.22s,,,,,,
+2026/08/07,tiktok,self-R06,夜里,不提产品,That oneperson who finishestheir meal and immediatelywants something sweet,After that sweet little treat Now I'm full,,,,186,4,0,1,1,,,5.05s,,,,,,
+2026/08/07,instagram,self-R06,夜里,不提产品,That oneperson who finishestheir meal and immediatelywants something sweet,After that sweet little treat Now I'm full,,,,1057/831,12,0,1,2,,,5s,,,,,,
+2026/08/08,tiktok,self-R08,夜里,不提产品,fighting the urge to have a sweet treat but i'm trying to be healthy,,,,,88,3,0,0,0,,,3.18s,,,,,,
+2026/08/08,instagram,self-R08,夜里,不提产品,fighting the urge to have a sweet treat but i'm trying to be healthy,,,,,,,,,,,,,,,,,,
+2026/08/08,tiktok,self-R09,夜里,不提产品,"11pm,I opened the. fridge again not hungry just to take a look",,,,,3,0,0,0,0,,,4.5s,,,,,,
+2026/08/08,instagram,self-R09,夜里,不提产品,"11pm,I opened the. fridge again not hungry just to take a look",,,,,177/136,3,0,0,0,,,3s,,,,,,
+2026/08/07,tiktok,NTTC-R03,夜里,不提产品,"I'm not hungry, I just want to eat something.",There is a very specific kind of late-night craving where cereal sounds like the answer to everything.,What’s your late-night cereal/snack?,"Late at night, cereal becomes a personality.",Cereal or chips?,152,10,0,1,0,,,4.47s,,,,,,
+2026/08/07,instagram,NTTC-R03,夜里,不提产品,"I'm not hungry, I just want to eat something.",,,,,1196/1046,35,0,0,4,,,5s,,,,,,
+2026/08/10,tiktok,self-001,,,"be honest...anyon succcessfully stopped late night fridge raids?
+the real struggle ... when it's 11 pm and your brain won't quiet down until you eat",,,,,99,0,0,0,0,,,3.51s,,,,,,
+2026/08/10,instagram,self-001,,,"be honest...anyon succcessfully stopped late night fridge raids?
+the real struggle ... when it's 11 pm and your brain won't quiet down until you eat",,,,,228/195,1,0,0,0,,,4s,,,,,,
+2026/08/10,tiktok,self-002,,,"quick question for anyone who stress-eats after a long day...
+how do U actually break the cycle when food is your only dopamine?",,,,,103,0,0,0,0,,,3.05s,,,,,,
+2026/08/10,instagram,self-002,,,"quick question for anyone who stress-eats after a long day...
+how do U actually break the cycle when food is your only dopamine?",,,,,257/200,2,22,0,0,,,5s,,,,,,
+2026/08/11,tiktok,self-003,,,"tell me i'm not the only one stuggling with sugar cravings..
+that exact moment after dinner when you'd literally do anything for a sweet treat.",,,,,110,1,0,0,0,,,3.27s,,,,,,
+2026/08/11,instagram,self-003,,,"tell me i'm not the only one stuggling with sugar cravings..
+that exact moment after dinner when you'd literally do anything for a sweet treat.",,,,,145/130,1,0,0,0,,,3s,,,,,,
+2026/08/11,tiktok,self-004,,,"can we talk about the guilt after giving in to a random craving?
+you promised yourself all day, but by 1pm you completely last control.",,,,,79,0,0,0,0,,,1.88s,,,,,,
+2026/08/11,instagram,self-004,,,"can we talk about the guilt after giving in to a random craving?
+you promised yourself all day, but by 1pm you completely last control.",,,,,154/129,2,0,0,0,,,5s,,,,,,
+2026/08/13,tiktok,self-005,,,I'm just gonna fix the line,,,,,79,5,0,0,0,,,4.17s,,,,,,
+2026/08/13,instagram,self-005,,,I'm just gonna fix the line,,,,,1290/1049,12,0,0,2,,,7s,,,,,,
+2026/08/13,tiktok,self-006,,,"how i handle all my emotions
+when I'm angry
+when I'm boredom
+when I'm happy...",,,,,83,3,0,0,0,,,3.15s,,,,,,
+2026/08/13,instagram,self-006,,,"how i handle all my emotions
+when I'm angry
+when I'm boredom
+when I'm happy...",,,,,1254/1102,51,1,4,4,,,4s,,,,,,
+2026/08/15,tiktok,self-007,,,"how i handle all my emotions
+when I'm angry
+when I'm boredom
+when I'm happy...",,,,,79,1,0,0,0,,,4.07s,,,,,,
+2026/08/16,tiktok,self-008,,,"me finally eating zhengao earlier, to avoid eating this, I had bananas, cookies,cheese, and a leftoover portion of rice mixed with adobo.",,,,,105,0,0,0,0,,,3.73s,,,,,,
+2026/08/11,tiktok,self-005,,,"be real with me... how do U turn off the constant food noise?
+when you just ate dinner but you're already planning your next snack.",,,,,137,0,0,0,0,,,3.25s,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,tiktok,NTTC-R04,外卖,软提 3-minute pause,"Before I tap pay, I wait three minutes.",The order can happen too fast. I am trying to put three minutes between the craving and the payment.,What do you order too fast?,The dangerous part is the 20 seconds before pay.,What’s your too-fast order?,,,,,,,,,,,,,,
+,tiktok,NTTC-R05,夜里,不提产品,I checked the snack cabinet twice.,Nothing changed in there. I just wanted one more small thing before the day was over.,"Cabinet, fridge, or delivery app?",The second snack-cabinet check is usually not about hunger.,Where do you check twice?,,,,,,,,,,,,,,
+,tiktok,NTTC-R06,外卖,不提产品,The craving disappeared after I ordered.,"I wanted it badly. Then the payment went through, and suddenly the want got smaller.",Has this happened: yes or no?,Paid for it. Wanted it less. Very annoying.,Ever paid and then regretted it?,,,,,,,,,,,,,,
+,tiktok,NTTC-R07,夜里,软提 3-minute pause,"At 12:08, I gave the craving three minutes.",I did not try to win the whole night. Just three minutes before standing up again.,"Hardest time: 10, 11, 12, or later?","At midnight, three minutes feels more realistic than willpower.","10 PM, 11 PM, or midnight?",,,,,,,,,,,,,,
+,tiktok,NTTC-R08,外卖,不提产品,I opened delivery apps while already full.,"That is the part I want to notice sooner. Full stomach, open app, scrolling like I am looking for a feeling.",Do you open apps full or hungry?,Already full. Still scrolling delivery apps.,Full or hungry when you open it?,,,,,,,,,,,,,,
+,tiktok,NTTC-R09,夜里,不提产品,I didn’t want food. I wanted today to pause.,The snack was not the whole thing. I think I just did not want the day to end yet.,What snack means “not ready for bed”?,Sometimes the snack is just a way to delay bedtime.,What’s your bedtime-delay snack?,,,,,,,,,,,,,,
+,tiktok,NTTC-R10,外卖,不提产品,I was one tap away from ordering fries.,Not a meal. Not hunger. Just fries in the cart and my thumb hovering over pay.,"Fries, nuggets, pizza, or dessert?",One tap away from fries. That is the moment.,What’s your one-tap food?,,,,,,,,,,,,,,
+,tiktok,NTTC-R11,夜里,不提产品,The kitchen light was already off.,Then I turned it back on. Not because I needed dinner. Because the night felt unfinished.,Do you turn the kitchen light back on?,Turning the kitchen light back on after bedtime is a specific feeling.,Kitchen light: yes or no?,,,,,,,,,,,,,,
+,tiktok,NTTC-R12,外卖,轻提 Not This Time,Not This Time is for the minute before pay.,"I made it for this tiny moment: the thumb hovering, the craving loud, the decision happening too fast.",Where is your hardest tap: pay or add to cart?,The craving gets fastest right before pay. That is the moment I built for.,Pay button or add-to-cart?,,,,,,,,,,,,,,
+,tiktok,NTTC-R13,夜里,软提 3-minute pause,I waited three minutes before opening the fridge.,Not to force myself to be good. Just to see if I still wanted it after the first wave passed.,"What would you wait for: ice cream, chips, or cereal?",Three minutes before the fridge. Not perfect. Just slower.,"Ice cream, chips, or cereal?",,,,,,,,,,,,,,
+,tiktok,NTTC-R14,外卖,不提产品,I didn’t want dinner. I wanted the click.,"The click can feel like relief. Choose food, pay, done. Then the craving is suddenly less dramatic.",What app do you open on autopilot?,Sometimes I do not want dinner. I want the click.,What food app is autopilot for you?,,,,,,,,,,,,,,
+,instagram,NTTC-R01,夜里,不提产品,11:46 PM. I opened the fridge again.,Dinner was done. I was already in pajamas. Still opened the fridge like something new would appear.,Fridge or pantry after 10 PM?,Not hungry. Just checking the fridge again for no reason.,What time do you start checking?,,,,,,,,,,,,,,
+,instagram,NTTC-R02,外卖,不提产品,"I filled the cart, then didn’t want it.","The craving was loud while I was choosing. After the cart was full, it got quieter. That part is so weird.",What food sits in your cart the most?,Sometimes the cart is more satisfying than the food.,"Pizza, burger, or dessert cart?",,,,,,,,,,,,,,
+,instagram,NTTC-R03,夜里,不提产品,I wasn’t hungry. I just wanted cereal.,There is a very specific kind of late-night craving where cereal sounds like the answer to everything.,What’s your late-night cereal/snack?,"Late at night, cereal becomes a personality.",Cereal or chips?,,,,,,,,,,,,,,
+,instagram,NTTC-R04,外卖,软提 3-minute pause,"Before I tap pay, I wait three minutes.",The order can happen too fast. I am trying to put three minutes between the craving and the payment.,What do you order too fast?,The dangerous part is the 20 seconds before pay.,What’s your too-fast order?,,,,,,,,,,,,,,
+,instagram,NTTC-R05,夜里,不提产品,I checked the snack cabinet twice.,Nothing changed in there. I just wanted one more small thing before the day was over.,"Cabinet, fridge, or delivery app?",The second snack-cabinet check is usually not about hunger.,Where do you check twice?,,,,,,,,,,,,,,
+,instagram,NTTC-R06,外卖,不提产品,The craving disappeared after I ordered.,"I wanted it badly. Then the payment went through, and suddenly the want got smaller.",Has this happened: yes or no?,Paid for it. Wanted it less. Very annoying.,Ever paid and then regretted it?,,,,,,,,,,,,,,
+,instagram,NTTC-R07,夜里,软提 3-minute pause,"At 12:08, I gave the craving three minutes.",I did not try to win the whole night. Just three minutes before standing up again.,"Hardest time: 10, 11, 12, or later?","At midnight, three minutes feels more realistic than willpower.","10 PM, 11 PM, or midnight?",,,,,,,,,,,,,,
+,instagram,NTTC-R08,外卖,不提产品,I opened delivery apps while already full.,"That is the part I want to notice sooner. Full stomach, open app, scrolling like I am looking for a feeling.",Do you open apps full or hungry?,Already full. Still scrolling delivery apps.,Full or hungry when you open it?,,,,,,,,,,,,,,
+,instagram,NTTC-R09,夜里,不提产品,I didn’t want food. I wanted today to pause.,The snack was not the whole thing. I think I just did not want the day to end yet.,What snack means “not ready for bed”?,Sometimes the snack is just a way to delay bedtime.,What’s your bedtime-delay snack?,,,,,,,,,,,,,,
+,instagram,NTTC-R10,外卖,不提产品,I was one tap away from ordering fries.,Not a meal. Not hunger. Just fries in the cart and my thumb hovering over pay.,"Fries, nuggets, pizza, or dessert?",One tap away from fries. That is the moment.,What’s your one-tap food?,,,,,,,,,,,,,,
+,instagram,NTTC-R11,夜里,不提产品,The kitchen light was already off.,Then I turned it back on. Not because I needed dinner. Because the night felt unfinished.,Do you turn the kitchen light back on?,Turning the kitchen light back on after bedtime is a specific feeling.,Kitchen light: yes or no?,,,,,,,,,,,,,,
+,instagram,NTTC-R12,外卖,轻提 Not This Time,Not This Time is for the minute before pay.,"I made it for this tiny moment: the thumb hovering, the craving loud, the decision happening too fast.",Where is your hardest tap: pay or add to cart?,The craving gets fastest right before pay. That is the moment I built for.,Pay button or add-to-cart?,,,,,,,,,,,,,,
+,instagram,NTTC-R13,夜里,软提 3-minute pause,I waited three minutes before opening the fridge.,Not to force myself to be good. Just to see if I still wanted it after the first wave passed.,"What would you wait for: ice cream, chips, or cereal?",Three minutes before the fridge. Not perfect. Just slower.,"Ice cream, chips, or cereal?",,,,,,,,,,,,,,
+,instagram,NTTC-R14,外卖,不提产品,I didn’t want dinner. I wanted the click.,"The click can feel like relief. Choose food, pay, done. Then the craving is suddenly less dramatic.",What app do you open on autopilot?,Sometimes I do not want dinner. I want the click.,What food app is autopilot for you?,,,,,,,,,,,,,,
+2026/08/18,instagram,NTTC-S01,夜里不饿但想吃,不提产品,"11:32 PM. I opened the fridge again.","Dinner was hours ago. I was already in bed mode. Still, I walked to the fridge like something had changed.","After 10 PM: fridge or snack cabinet?","11:32 PM. Not hungry. Still at the fridge.","Fridge or cabinet?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/18,tiktok,NTTC-S01,夜里不饿但想吃,不提产品,"11:32 PM. I opened the fridge again.","Dinner was hours ago. I was already in bed mode. Still, I walked to the fridge like something had changed.","After 10 PM: fridge or snack cabinet?","11:32 PM. Not hungry. Still at the fridge.","Fridge or cabinet?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/18,instagram,NTTC-S02,外卖 / 付款前冲动,不提产品,"My thumb was already on “pay.”","The food sounded perfect while I was choosing. Then I got to the pay button and suddenly felt unsure.","What food gets you to the pay button fastest?","The craving got loud right before pay.","Pizza, burgers, or sweets?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/18,tiktok,NTTC-S02,外卖 / 付款前冲动,不提产品,"My thumb was already on “pay.”","The food sounded perfect while I was choosing. Then I got to the pay button and suddenly felt unsure.","What food gets you to the pay button fastest?","The craving got loud right before pay.","Pizza, burgers, or sweets?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/19,instagram,NTTC-S03,夜里不饿但想吃,不提产品,"I checked the pantry, then checked again.","Nothing new was in there. I just wanted one more small thing before the day ended.","What is your “one more thing” snack?","Checked the pantry twice. Still not hungry.","Chips, cereal, or chocolate?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/19,tiktok,NTTC-S03,夜里不饿但想吃,不提产品,"I checked the pantry, then checked again.","Nothing new was in there. I just wanted one more small thing before the day ended.","What is your “one more thing” snack?","Checked the pantry twice. Still not hungry.","Chips, cereal, or chocolate?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/19,instagram,NTTC-S04,外卖 / 付款前冲动,软提 3-minute pause,"Before I order, I give it three minutes.","The order happens so fast when the craving is loud. I am trying a 3-minute pause before the tap.","What do you order too fast?","Before I tap pay, I wait three minutes.","What is your too-fast order?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/19,tiktok,NTTC-S04,外卖 / 付款前冲动,软提 3-minute pause,"Before I order, I give it three minutes.","The order happens so fast when the craving is loud. I am trying a 3-minute pause before the tap.","What do you order too fast?","Before I tap pay, I wait three minutes.","What is your too-fast order?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/20,instagram,NTTC-S05,夜里不饿但想吃,不提产品,"I was tired, but cereal sounded urgent.","It was not a real dinner problem. It was the quiet kitchen, the late hour, and cereal suddenly feeling like the answer.","What cereal hits hardest at night?","At night, cereal starts sounding urgent.","What cereal is dangerous at night?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/20,tiktok,NTTC-S05,夜里不饿但想吃,不提产品,"I was tired, but cereal sounded urgent.","It was not a real dinner problem. It was the quiet kitchen, the late hour, and cereal suddenly feeling like the answer.","What cereal hits hardest at night?","At night, cereal starts sounding urgent.","What cereal is dangerous at night?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/20,instagram,NTTC-S06,已经很饱还在打开外卖 app,不提产品,"I was full, still scrolling delivery apps.","My stomach was not asking for food. My hand just opened the app and started looking anyway.","When you are full, do you still open food apps?","Full stomach. Delivery app open.","Full and scrolling: yes or no?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/20,tiktok,NTTC-S06,已经很饱还在打开外卖 app,不提产品,"I was full, still scrolling delivery apps.","My stomach was not asking for food. My hand just opened the app and started looking anyway.","When you are full, do you still open food apps?","Full stomach. Delivery app open.","Full and scrolling: yes or no?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/21,instagram,NTTC-S07,夜里不饿但想吃,软提 3-minute pause,"At midnight, I paused before the fridge.","I did not try to solve the whole night. Just a 3-minute pause before opening the fridge again.","Hardest time: 10, 11, 12, or later?","Midnight craving. Three minutes before the fridge.","10, 11, 12, or later?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/21,tiktok,NTTC-S07,夜里不饿但想吃,软提 3-minute pause,"At midnight, I paused before the fridge.","I did not try to solve the whole night. Just a 3-minute pause before opening the fridge again.","Hardest time: 10, 11, 12, or later?","Midnight craving. Three minutes before the fridge.","10, 11, 12, or later?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/21,instagram,NTTC-S08,外卖 / 付款前冲动,不提产品,"I built the whole cart, then closed it.","The craving was strongest while I was choosing. Once the cart was full, I did not want it the same way.","Do you close the cart or pay anyway?","Cart full. Craving quieter.","Close it or pay anyway?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/21,tiktok,NTTC-S08,外卖 / 付款前冲动,不提产品,"I built the whole cart, then closed it.","The craving was strongest while I was choosing. Once the cart was full, I did not want it the same way.","Do you close the cart or pay anyway?","Cart full. Craving quieter.","Close it or pay anyway?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/22,instagram,NTTC-S09,已经很饱还在打开外卖 app,不提产品,"I wasn’t hungry. I just wanted to browse food.","There is a strange comfort in scrolling menus when I already ate. I am not choosing dinner. I am looking for a feeling.","Which app do you open just to browse?","Not hungry. Just browsing food.","Uber Eats, DoorDash, or another app?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/22,tiktok,NTTC-S09,已经很饱还在打开外卖 app,不提产品,"I wasn’t hungry. I just wanted to browse food.","There is a strange comfort in scrolling menus when I already ate. I am not choosing dinner. I am looking for a feeling.","Which app do you open just to browse?","Not hungry. Just browsing food.","Uber Eats, DoorDash, or another app?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/22,instagram,NTTC-S10,夜里不饿但想吃,不提产品,"The kitchen light was already off.","Then I turned it back on. Not for a meal. Just to stand there and look at snacks.","Do you turn the kitchen light back on?","Kitchen light back on. Snacks inspected.","Kitchen light: yes or no?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/22,tiktok,NTTC-S10,夜里不饿但想吃,不提产品,"The kitchen light was already off.","Then I turned it back on. Not for a meal. Just to stand there and look at snacks.","Do you turn the kitchen light back on?","Kitchen light back on. Snacks inspected.","Kitchen light: yes or no?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/23,instagram,NTTC-S11,外卖 / 付款前冲动,不提产品,"The order felt urgent for 30 seconds.","One minute I needed it. The next minute I was staring at the pay button, wondering if I even wanted it.","What food feels urgent for 30 seconds?","Needed it. Then stared at pay.","What food does this to you?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/23,tiktok,NTTC-S11,外卖 / 付款前冲动,不提产品,"The order felt urgent for 30 seconds.","One minute I needed it. The next minute I was staring at the pay button, wondering if I even wanted it.","What food feels urgent for 30 seconds?","Needed it. Then stared at pay.","What food does this to you?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/23,instagram,NTTC-S12,已经很饱还在打开外卖 app,软提 3-minute pause,"Full, scrolling, then I waited three minutes.","I was not hungry. I was already full. Before adding anything to the cart, I gave the feeling three minutes.","When full, do you browse or add to cart?","Already full. I waited before adding to cart.","Browse or add to cart?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/23,tiktok,NTTC-S12,已经很饱还在打开外卖 app,软提 3-minute pause,"Full, scrolling, then I waited three minutes.","I was not hungry. I was already full. Before adding anything to the cart, I gave the feeling three minutes.","When full, do you browse or add to cart?","Already full. I waited before adding to cart.","Browse or add to cart?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/24,instagram,NTTC-S13,夜里不饿但想吃,不提产品,"I didn’t want food. I wanted bedtime to wait.","The snack was not really the point. I think I just wanted one more pause before the day was officially over.","What snack means “not ready for bed”?","The snack was just delaying bedtime.","What is your bedtime-delay snack?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/24,tiktok,NTTC-S13,夜里不饿但想吃,不提产品,"I didn’t want food. I wanted bedtime to wait.","The snack was not really the point. I think I just wanted one more pause before the day was officially over.","What snack means “not ready for bed”?","The snack was just delaying bedtime.","What is your bedtime-delay snack?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/24,instagram,NTTC-S14,外卖 / 付款前冲动,轻提 Not This Time,"Not This Time is for the second before pay.","I made it for this tiny moment: food in the cart, craving loud, thumb hovering over pay. Just a pause before the decision.","Harder moment: choosing food or tapping pay?","Food in cart. Thumb over pay. That is the moment.","Choosing food or tapping pay?",,,,,,,,,未追踪,未追踪,,,,
+2026/08/24,tiktok,NTTC-S14,外卖 / 付款前冲动,轻提 Not This Time,"Not This Time is for the second before pay.","I made it for this tiny moment: food in the cart, craving loud, thumb hovering over pay. Just a pause before the decision.","Harder moment: choosing food or tapping pay?","Food in cart. Thumb over pay. That is the moment.","Choosing food or tapping pay?",,,,,,,,,未追踪,未追踪,,,,

@@ -1,0 +1,113 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+  publishedTime?: string;
+  schema?: Record<string, any>;
+  isHome?: boolean;
+}
+
+const {
+  title = "Not This Time - 3-Minute Craving Timer for iOS",
+  description = "Not This Time is a privacy-first iOS app that helps you ride out food cravings with a free 3-minute urge surfing timer, ticking sound, and mindful pauses.",
+  image = "/assets/icon.png",
+  article = false,
+  publishedTime,
+  schema,
+  isHome = false,
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://feeline03.github.io';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = image.startsWith('http') ? image : new URL(withBase(image), siteUrl).toString();
+const faviconUrl = withBase('/assets/icon.png');
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon & Touch Icon -->
+    <link rel="icon" type="image/png" href={faviconUrl} />
+    <link rel="apple-touch-icon" href={faviconUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={article ? "article" : "website"} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="Not This Time" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Default App Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Not This Time",
+      "alternateName": "我忍住啦",
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Health / Mindful Eating",
+      "operatingSystem": "iOS",
+      "url": siteUrl,
+      "downloadUrl": "https://apps.apple.com/app/6769012887",
+      "description": "Not This Time is a privacy-first iOS app that helps people pause during food cravings with a free 3-minute urge surfing timer, ticking sound, optional white noise, voice guidance, and longer timers.",
+      "featureList": [
+        "3-minute urge surfing timer",
+        "Food craving pause",
+        "Ticking sound",
+        "White noise",
+        "Voice guidance",
+        "No account required",
+        "No cloud sync"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "description": "Free download with optional in-app purchases."
+      }
+    })} />
+
+    <!-- Custom Page Schema if provided -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="min-h-screen bg-night-950 font-sans text-slate-100 antialiased selection:bg-blue-500/30 selection:text-white">
+    <!-- Ambient background grid and radial glows -->
+    <div class="fixed inset-0 -z-10 pointer-events-none">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(47,124,255,0.18),transparent_34rem)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(58,96,180,0.15),transparent_26rem)]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+    </div>
+
+    <Header isHome={isHome} />
+
+    <main class="relative z-10">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

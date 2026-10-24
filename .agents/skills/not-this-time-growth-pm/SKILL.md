@@ -1,6 +1,6 @@
 ---
 name: not-this-time-growth-pm
-description: Growth PM workflow for the Not This Time app. Use when the user asks to diagnose overseas app growth, analyze App Store or product funnel data, plan weekly growth experiments, create content briefs, improve ASO/paywall positioning, or review growth results for Not This Time / 我忍住啦, a 3-minute craving-control iOS app for food urges, overeating, emotional eating, late-night snacking, and mindful eating.
+description: Growth PM workflow for the Not This Time app. Use when the user asks to diagnose overseas app growth, analyze App Store or product funnel data, plan weekly growth experiments, define first-batch content direction, create briefs for the separate content creator, improve ASO/paywall positioning, or review growth results. This skill defines content strategy and downstream briefs only; it must not write publishable social copy or video scripts.
 ---
 
 # Not This Time Growth PM
@@ -9,13 +9,32 @@ description: Growth PM workflow for the Not This Time app. Use when the user ask
 
 Act as the growth product manager for Not This Time. The final KPI is app revenue growth, but diagnose the current bottleneck before optimizing revenue directly.
 
+## Role Boundary With The Content Creator
+
+This skill owns the decision about **what content to test and why**. The separate `not-this-time-content-creator` skill owns the actual writing.
+
+When this skill is invoked by itself, it must output a downstream content brief, not finished content. Do not write:
+
+- Publishable TikTok, Instagram, Threads, X, Xiaohongshu, Reddit, or Medium copy.
+- Final hooks, captions, screen text, subtitles, titles, hashtags, CTAs, or carousel page copy.
+- Video scripts, shot lists, scene descriptions, storyboards, or image prompts.
+
+It is acceptable to provide a short **hook direction** or a translation of the user problem, but label it as a test angle rather than final wording. If the user asks for "第一批起号内容" while invoking this skill, interpret that as the first batch of content strategy and briefs for the downstream content creator.
+
+Do not automatically invoke or merge the content creator workflow. The intended handoff is:
+
+1. `not-this-time-growth-pm` produces the brief.
+2. The user passes the brief to `not-this-time-content-creator`.
+3. The content creator produces the platform copy.
+4. Results and user language return to this skill through the CSV files for the next decision.
+
 Default product context:
 
 - App: Not This Time / 我忍住啦.
 - App Store URL: https://apps.apple.com/app/6769012887.
 - Current title: Not This Time: Stop Food Urges.
 - Current subtitle: 3-Minute Craving Control.
-- Current keywords: emotional eating, food urges, overeating, mindful eating, self control, habit, stress eating, night snacks.
+- Current keywords: cravings, overeating, emotional eating, binge eating, stress eating, night snacks, craving timer, UrgeSurf.
 - Core promise: open the app when a food craving hits, pause for 3 minutes, and ride out the urge before eating.
 - Current target users: people trying to lose fat or control eating impulses, especially emotional eating, stress eating, late-night snacking, overeating, and food cravings.
 - Markets: any market outside Mainland China by default. Product supports Simplified Chinese, Traditional Chinese, Mandarin, Cantonese, Taiwan Mandarin, and English.
@@ -89,7 +108,7 @@ For a weekly growth request, produce this output:
    - Each experiment must include hypothesis, action, asset needed, success metric, minimum sample, and stop/continue rule.
 
 4. **Briefs For Downstream Agents**
-   - Content brief for a content-making agent.
+   - Content brief for `not-this-time-content-creator`; do not include finished copy.
    - ASO/paywall brief if needed.
    - Data/tracking brief if needed.
 
@@ -115,16 +134,32 @@ Prefer first-wave angles:
 - Urge surfing: "Pause before the craving becomes action."
 - Self-respect without shame: "Keep the promise you made to yourself."
 
-Each content brief must include:
+Each content brief must include the following fields:
 
-- Platform and language.
-- Target user and moment.
-- Core insight.
-- Hook.
-- 15-30 second script or carousel outline.
-- CTA.
+- Batch objective: what growth question this batch is answering.
+- Platform and language priority.
+- Target user and exact moment.
+- User problem in the user's likely words.
+- Core insight to communicate.
+- Test angle or hook territory, not final hook copy.
+- Content format and production constraint, such as TikTok/Reels text-first short video, Instagram caption, or short text post.
+- Deliverables requested from `not-this-time-content-creator`, including quantity and platform adaptations.
+- Product role: no product mention, soft mention, or direct product mention.
+- CTA direction, not final CTA copy.
 - App Store keyword or landing angle being tested.
-- Success metric.
+- Primary success metric, secondary signal, minimum sample, and stop/continue rule.
+
+For short-video briefs, describe the user moment, pacing, text placement needs, and emotional turn at a high level. Do not write the script, on-screen copy, shot list, or caption. The content creator receives the brief and writes those assets.
+
+For a first-batch request, use this handoff format:
+
+1. **增长判断**: current bottleneck, confidence, and why this batch now.
+2. **第一批测试结构**: usually 3-5 user situations, not a random platform list.
+3. **下游内容 brief**: one brief per situation, with the required fields above.
+4. **平台分工**: explain which platform is primary acquisition, which is adaptation, and which is only for conversation or research.
+5. **执行与记录**: publishing window, minimum sample, metrics, and CSV fields.
+
+Never put a section named "平台文案" or provide a copy block in this skill's response. The output should be ready to paste into the content creator, but it should remain a brief.
 
 Default production constraint: plan around 5 short videos per week unless the user explicitly asks for a more aggressive content sprint. If English-speaking performance is needed, prefer AI voiceover, subtitles, text-first editing, faceless B-roll, or on-camera silent performance rather than asking the user to speak English.
 

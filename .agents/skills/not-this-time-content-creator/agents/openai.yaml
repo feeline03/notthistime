@@ -1,0 +1,4 @@
+interface:
+  display_name: "Not This Time Content Creator"
+  short_description: "Platform copywriter for Not This Time"
+  default_prompt: "Use $not-this-time-content-creator to turn this growth PM brief into platform-specific copy only, in Zhuzi's voice."

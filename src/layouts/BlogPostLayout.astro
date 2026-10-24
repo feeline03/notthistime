@@ -1,0 +1,157 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AppCtaBanner from '../components/AppCtaBanner.astro';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author: string;
+  category: string;
+  readingTime: string;
+  image?: string;
+  tags?: string[];
+  slug: string;
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  category,
+  readingTime,
+  image = "/assets/icon.png",
+  tags = [],
+  slug,
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://feeline03.github.io';
+const postUrl = new URL(withBase(`/blog/${slug}`), siteUrl).toString();
+const homeUrl = withBase('/');
+const blogUrl = withBase('/blog');
+
+// Format date
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+
+// Article Schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": pubDate.toISOString(),
+  "dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Not This Time",
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL(withBase('/assets/icon.png'), siteUrl).toString()
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": postUrl
+  }
+};
+---
+
+<BaseLayout
+  title={`${title} | Not This Time Blog`}
+  description={description}
+  image={image}
+  article={true}
+  publishedTime={pubDate.toISOString()}
+  schema={articleSchema}
+>
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Breadcrumbs navigation -->
+    <nav aria-label="Breadcrumb" class="mb-8 flex items-center gap-2 text-xs text-slate-400">
+      <a href={homeUrl} class="transition hover:text-white">Home</a>
+      <span>/</span>
+      <a href={blogUrl} class="transition hover:text-white">Blog</a>
+      <span>/</span>
+      <span class="text-blue-400 truncate max-w-xs">{title}</span>
+    </nav>
+
+    <!-- Semantic Article Container -->
+    <article class="relative">
+      <header class="mb-10 border-b border-slate-800/80 pb-8">
+        <div class="flex flex-wrap items-center gap-3 text-xs mb-4">
+          <span class="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 font-semibold text-blue-300">
+            {category}
+          </span>
+          <span class="text-slate-400">·</span>
+          <span class="text-slate-400">{readingTime}</span>
+          <span class="text-slate-400">·</span>
+          <time datetime={pubDate.toISOString()} class="text-slate-400">{formattedDate}</time>
+        </div>
+
+        <h1 class="text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl leading-[1.15]">
+          {title}
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-300 leading-relaxed">
+          {description}
+        </p>
+
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-blue-600/30 text-xs font-bold text-blue-300 border border-blue-500/30">
+            NT
+          </div>
+          <div>
+            <div class="text-xs font-medium text-white">{author}</div>
+            <div class="text-[11px] text-slate-400">Evidence-Based Behavioral Support</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Prose Content -->
+      <div class="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-slate-800 prose-h2:pb-2 prose-h3:text-xl prose-h3:mt-8 prose-p:text-slate-300 prose-p:leading-relaxed prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-li:text-slate-300 prose-blockquote:border-l-blue-400 prose-blockquote:bg-blue-950/20 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg">
+        <slot />
+      </div>
+
+      {tags.length > 0 && (
+        <div class="mt-12 flex flex-wrap items-center gap-2 border-t border-slate-800/80 pt-6">
+          <span class="text-xs font-semibold text-slate-400 mr-2">Tags:</span>
+          {tags.map((tag) => (
+            <span class="rounded-lg border border-slate-800 bg-night-900 px-2.5 py-1 text-xs text-slate-300">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <!-- High-Conversion Bottom CTA Banner -->
+      <div class="mt-14">
+        <AppCtaBanner
+          title="Tired of Fighting Late-Night Cravings with Raw Willpower?"
+          description="Willpower depletes as night falls. Let Not This Time act as your 3-minute physical pause and audio anchor—giving your prefrontal cortex time to regain control."
+        />
+      </div>
+
+      <!-- Back to blog navigation -->
+      <div class="mt-10 text-center">
+        <a
+          href={blogUrl}
+          class="inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition hover:text-blue-300"
+        >
+          ← Back to all articles
+        </a>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

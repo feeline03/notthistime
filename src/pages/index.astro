@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCtaBanner from '../components/AppCtaBanner.astro';
+import { withBase } from '../utils/paths';
+
+const screenshotLaunch = withBase('/assets/screenshot-launch.png');
+const screenshotTimer = withBase('/assets/screenshot-timer.png');
+const appStoreUrl = "https://apps.apple.com/app/6769012887";
+
+const faqList = [
+  {
+    q: "What is Not This Time (我忍住啦)?",
+    a: "Not This Time is a minimalist iOS app designed to help you pause before acting on intense food cravings, late-night snacking, or impulsive urges. It uses a 3-minute ticking countdown based on the clinical psychology concept of Urge Surfing—guiding you to ride out the craving wave until it peaks and naturally fades."
+  },
+  {
+    q: "Who is Not This Time for?",
+    a: "It is built for anyone practicing mindful eating, managing weight loss, recovering from emotional eating, or struggling with midnight pantry raids and impulsive habits. It provides an immediate, judgment-free pause during moments of intense craving."
+  },
+  {
+    q: "Is the 3-minute urge timer completely free?",
+    a: "Yes! The core 3-minute Urge Surfing timer, rhythmic auditory ticking, and alternative selection are 100% free with zero ads. Optional Pro features unlock deeper white noise sounds, voice guidance, and custom timer durations."
+  },
+  {
+    q: "Does Not This Time replace clinical or medical treatment?",
+    a: "No. Not This Time is a behavioral self-support habit tool. It is not a medical device, does not provide psychotherapy, and does not diagnose, treat, or cure eating disorders or medical conditions."
+  },
+  {
+    q: "Does the app require an account or track my personal data?",
+    a: "No. The app is 100% private, offline-ready, and collects zero personal data. There is no account registration, no cloud tracking, and no social feed distractions."
+  }
+];
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
+---
+
+<BaseLayout
+  title="Not This Time - 3-Minute Craving Timer & Urge Surfing for iOS"
+  description="Pause the craving before it becomes action. Not This Time is a privacy-first iOS app that helps you ride out late-night food cravings and impulsive urges with a 3-minute urge surfing timer."
+  isHome={true}
+  schema={homeFaqSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <div class="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3.5 py-1.5 text-xs font-semibold text-blue-300">
+            <span class="flex h-2 w-2 rounded-full bg-blue-400"></span>
+            Health & Mindful Eating for iOS
+          </div>
+
+          <h1 class="text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-6xl leading-[1.08]">
+            Pause the craving <br class="hidden sm:inline" />
+            <span class="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              before it becomes action.
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            Not This Time helps you ride out the moment when you crave late-night food, impulsive snacks, or mindless snacking. Choose a safe alternative, start a 3-minute countdown, and let the urge pass like a wave.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 text-base font-bold text-white shadow-xl shadow-blue-500/30 transition hover:-translate-y-0.5 hover:from-blue-400 hover:to-blue-500 hover:shadow-blue-500/50"
+            >
+              <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.64-.78 1.08-1.86.96-2.95-1 .04-2.15.67-2.82 1.45-.58.68-1.1 1.77-.96 2.84 1.11.09 2.19-.57 2.82-1.34z"/>
+              </svg>
+              Download on App Store
+            </a>
+
+            <a
+              href="#how"
+              class="inline-flex items-center justify-center rounded-full border border-slate-700 bg-night-900/80 px-6 py-4 text-sm font-semibold text-slate-200 transition hover:border-slate-500 hover:bg-night-850 hover:text-white"
+            >
+              See how it works
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-4 flex flex-wrap items-center gap-2.5 text-xs text-slate-300">
+            <span class="rounded-full border border-slate-800 bg-night-900/60 px-3 py-1.5 backdrop-blur-sm">
+              ✓ Free 3-min Urge Surfing
+            </span>
+            <span class="rounded-full border border-slate-800 bg-night-900/60 px-3 py-1.5 backdrop-blur-sm">
+              ✓ Zero account required
+            </span>
+            <span class="rounded-full border border-slate-800 bg-night-900/60 px-3 py-1.5 backdrop-blur-sm">
+              ✓ 100% Offline & Private
+            </span>
+            <span class="rounded-full border border-slate-800 bg-night-900/60 px-3 py-1.5 backdrop-blur-sm">
+              ✓ Also known as 我忍住啦
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Device Screenshot -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
+            <div class="absolute -inset-4 rounded-[44px] bg-gradient-to-tr from-blue-600/30 to-indigo-600/10 blur-2xl -z-10"></div>
+            <div class="overflow-hidden rounded-[38px] border-2 border-blue-400/30 bg-night-900 p-2.5 shadow-2xl shadow-blue-500/20">
+              <img
+                src={screenshotLaunch}
+                alt="Not This Time app launch screen showing 3 minutes to overcome the urge to eat"
+                class="rounded-[30px] w-full h-auto object-cover"
+                width="360"
+                height="740"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Highlights Section -->
+  <section class="border-y border-slate-800/80 bg-night-900/40 py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold tracking-wider uppercase text-blue-400">Core Highlights</span>
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-2">
+          Engineered for the Moment of Weakness
+        </h2>
+        <p class="mt-4 text-slate-300">
+          When willpower fades at midnight, you don't need calorie logs or complex habit trackers. You need instant micro-friction.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Feature 1 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-night-900/60 p-8 transition hover:border-blue-500/30 hover:bg-night-900">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-400/20 text-blue-400 font-bold text-lg mb-6">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">3-Minute Urge Surfing Timer</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Science proves cravings peak like waves and fade within minutes. A single tap launches a calming 3-minute barrier so you don't act impulsively.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-night-900/60 p-8 transition hover:border-blue-500/30 hover:bg-night-900">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-400/20 text-blue-400 font-bold text-lg mb-6">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Auditory Anchoring</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Rhythmic ticking and calming white noise ground your racing thoughts, cutting through the emotional fog of hunger and boredom.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="rounded-2xl border border-slate-800/80 bg-night-900/60 p-8 transition hover:border-blue-500/30 hover:bg-night-900">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-400/20 text-blue-400 font-bold text-lg mb-6">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Zero Tracking, 100% Private</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            No emails, no logins, no notifications, and no guilt. Your struggles remain strictly between you and your phone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Science Section -->
+  <section id="science" class="py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3.5 py-1.5 text-xs font-semibold text-blue-300">
+            Behavioral Psychology
+          </div>
+          <h2 class="text-3xl font-extrabold text-white sm:text-4xl leading-tight">
+            Cravings behave like waves. <br />
+            You just have to surf the crest.
+          </h2>
+          <p class="text-slate-300 leading-relaxed">
+            Originating from Dr. Alan Marlatt's research at the University of Washington, <strong class="text-white">Urge Surfing</strong> is a clinically validated mindfulness practice: rather than fighting an urge with brute force or immediately giving in, you observe the physical sensations and ride out the curve.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold">1</div>
+              <div>
+                <h4 class="text-base font-semibold text-white">Name the Urge</h4>
+                <p class="text-sm text-slate-400">Labeling the desire creates immediate psychological detachment between impulse and behavior.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold">2</div>
+              <div>
+                <h4 class="text-base font-semibold text-white">Delay the Response</h4>
+                <p class="text-sm text-slate-400">A short 3-minute pause gives your exhausted prefrontal cortex time to reboot.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold">3</div>
+              <div>
+                <h4 class="text-base font-semibold text-white">Watch Intensity Fall</h4>
+                <p class="text-sm text-slate-400">Without mental fuel, dopamine urges peak and subside within 180 seconds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 flex justify-center">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
+            <div class="overflow-hidden rounded-[38px] border-2 border-blue-400/30 bg-night-900 p-2.5 shadow-2xl shadow-blue-500/20">
+              <img
+                src={screenshotTimer}
+                alt="Not This Time 3-minute countdown timer screen"
+                class="rounded-[30px] w-full h-auto object-cover"
+                loading="lazy"
+                width="360"
+                height="740"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how" class="border-t border-slate-800/80 bg-night-900/40 py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold tracking-wider uppercase text-blue-400">Three Steps</span>
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-2">
+          How to Use It When the Urge Hits
+        </h2>
+        <p class="mt-4 text-slate-300">
+          Designed intentionally to require minimum mental effort under acute stress or fatigue.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="relative rounded-2xl border border-slate-800 bg-night-900/80 p-8">
+          <div class="text-5xl font-black text-slate-800 mb-4 select-none">01</div>
+          <h3 class="text-xl font-bold text-white mb-2">Pick a Safe Alternative</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Notice what you are craving. Choose a calmer option (like water, herbal tea, or brushing teeth) to break the mental tunnel vision.
+          </p>
+        </div>
+
+        <div class="relative rounded-2xl border border-slate-800 bg-night-900/80 p-8">
+          <div class="text-5xl font-black text-slate-800 mb-4 select-none">02</div>
+          <h3 class="text-xl font-bold text-white mb-2">Start the 3-Minute Pause</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Hit Start. Listen to the steady auditory ticking. Close your eyes and breathe while the craving wave crests.
+          </p>
+        </div>
+
+        <div class="relative rounded-2xl border border-slate-800 bg-night-900/80 p-8">
+          <div class="text-5xl font-black text-slate-800 mb-4 select-none">03</div>
+          <h3 class="text-xl font-bold text-white mb-2">Reclaim Control</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            When the timer ends, the urgency has lifted. You may still eat if truly hungry, but you are no longer acting on blind impulse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold tracking-wider uppercase text-blue-400">FAQ</span>
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl mt-2">
+          Frequently Asked Questions
+        </h2>
+        <p class="mt-4 text-slate-300">
+          Everything you need to know about Not This Time and the urge surfing methodology.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {faqList.map((item) => (
+          <details class="group rounded-2xl border border-slate-800 bg-night-900/60 p-6 transition hover:border-slate-700">
+            <summary class="flex cursor-pointer items-center justify-between font-bold text-white text-base sm:text-lg select-none">
+              <span>{item.q}</span>
+              <span class="ml-4 shrink-0 text-blue-400 transition group-open:rotate-180">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <p class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Section -->
+  <section class="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+    <AppCtaBanner
+      title="Tired of Fighting Midnight Cravings with Raw Willpower?"
+      description="Willpower empties out when you're tired. Download Not This Time to turn impulsive urges into mindful pauses."
+    />
+  </section>
+</BaseLayout>
