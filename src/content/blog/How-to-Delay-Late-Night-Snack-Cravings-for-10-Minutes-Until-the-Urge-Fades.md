@@ -15,7 +15,7 @@ If you've ever searched for **tricks to delay late-night snacking for 10 minutes
 We hear the same thing again and again from people who live this loop: *"I'm not even hungry. I just can't make the feeling stop. And if I could just get past the first few minutes, I think I'd be fine. But those few minutes are impossible."*
 If that's you, this guide is written for you. No lectures, no "just have more discipline." Just what's actually happening in your head, and three small things you can do tonight.
 
-## The Hook: The Most Impossible Few Minutes of Your Day
+## The Most Impossible Few Minutes of Your Day
 
 Here's the strange thing about a craving: it feels like it will last forever. At 11:30 p.m., it feels less like a thought and more like a *command*.
 
@@ -29,7 +29,7 @@ The problem is that those few minutes are exactly where most of us break. Becaus
 
 The good news is that a few minutes is a small enough window to work with.
 
-## The Biological Trap: Why Your Brain Isn't on Your Side After Dark
+## Why Your Brain Isn't on Your Side After Dark
 
 Let's get one thing out of the way: **this is not a willpower failure.** Your brain, at night, is a very different machine than the one that got you through your morning.
 
@@ -48,7 +48,7 @@ So when you think, *"Why can't I just stop?"*, the more accurate question might 
 
 And that, strangely, is good news. If it's about timing and tools, not character, then it can be fixed with timing and tools.
 
-## Actionable Physical Interventions: 3 Tiny Ways to Get Through the Wave
+## 3 Tiny Ways to Get Through the Wave
 
 You don't need a morning-person routine or an hour of meditation. At 11:30 p.m., you need things that are **physical, tiny, and almost impossible to overthink.**
 
@@ -93,7 +93,7 @@ If it has softened, wonderful. You just rode a wave. If it hasn't, you can exten
 
 **Eating on purpose is not the same as failing.** Breaking the autopilot is the win.
 
-## The Bridge & Solution: When Counting Isn't Enough
+## When Counting Isn't Enough
 
 We know. **You understand all of this.** You can nod along at 2 p.m.
 
