@@ -3,6 +3,9 @@ name: Deploy Not This Time Website to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # 每天 UTC 0:00 (北京时间早上 8:00) 自动触发构建，发布到期的定时文章
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
