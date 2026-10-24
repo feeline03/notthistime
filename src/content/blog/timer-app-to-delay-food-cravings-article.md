@@ -37,7 +37,7 @@ Worse, a streak can quietly become a source of shame. Miss one night after a lon
 
 **Habit apps are good at tracking behavior over time. They're not designed to intervene in a 3-minute window.** That isn't a flaw; it's just a different job.
 
-## Category Breakdown: What Each Tool Does Well (and Where It Stops)
+## What Each Tool Does Well (and Where It Stops)
 
 Let's look at the main categories honestly. None of these is "bad." They're just built for different problems.
 
@@ -85,7 +85,7 @@ This is the one most people try first, and it's a reasonable instinct. "I'll set
 
 **Best for:** People who already have strong self-control habits and just need a clock.
 
-## The New Paradigm: Acute Impulse Intervention
+## Acute Impulse Intervention
 
 Look at the three categories above and a gap appears. We have tools for **long-term tracking** and tools for **blocking.** What's missing is a tool for the **moment itself**: a short, protected pause that helps you get through the peak of an urge.
 
