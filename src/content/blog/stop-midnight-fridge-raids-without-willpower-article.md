@@ -92,7 +92,7 @@ When the time's up, ask yourself: *"Is it as strong as it was?"* If it's softene
 
 **Eating deliberately is not failing. Breaking the autopilot is the win.**
 
-## The Bridge & Solution: An External Blocker for the Hardest Three Minutes
+## An External Blocker for the Hardest Three Minutes
 
 We know. **You understand all of this.** At 2 p.m., it makes perfect sense.
 
