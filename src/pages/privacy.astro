@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Privacy Policy | Not This Time (我忍住啦)"
-  description="Not This Time is a local-first, privacy-by-design iOS app. We do not create accounts, collect personal info, or track user data."
+  description="Not This Time is a privacy-first iOS app. We do not collect personally identifiable information such as your name, phone number, or email address."
 >
   <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="rounded-3xl border border-slate-800 bg-night-900/80 p-8 sm:p-12 shadow-2xl backdrop-blur-sm">
@@ -21,54 +21,76 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Welcome to <strong>Not This Time</strong> (also known as <em>我忍住啦</em>).
           </p>
           <p>
-            Not This Time is a local-first iOS app designed to help users manage food cravings and impulse control through mindfulness and timed intervention techniques.
+            Not This Time is a local-first app designed to help users manage food cravings and impulse control through mindfulness and timed intervention techniques.
           </p>
           <p>
-            We value your privacy and minimize data collection whenever possible. This app operates locally on your device and does not upload, share, or sell your personal information.
+            Most of your data remains stored locally on your device. We do not collect personally identifiable information such as your name, phone number, or email address.
           </p>
 
           <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">1. Data Collection</h2>
           <p>This app does <strong>not</strong>:</p>
           <ul class="list-disc pl-6 space-y-1">
-            <li>Create user accounts</li>
-            <li>Require user login or email</li>
-            <li>Collect personally identifiable information (PII)</li>
-            <li>Upload user data to developer servers</li>
-            <li>Track users for advertising purposes</li>
-            <li>Sell user data</li>
-            <li>Use third-party advertising SDKs</li>
-            <li>Use third-party analytics SDKs</li>
+            <li>create user accounts</li>
+            <li>require user login</li>
+            <li>collect personally identifiable information (such as name, email, or phone number)</li>
+            <li>track users for advertising purposes</li>
+            <li>sell user data</li>
+            <li>use third-party advertising SDKs</li>
           </ul>
-          <p>All user data remains stored locally on your device.</p>
 
-          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">2. Local Storage</h2>
-          <p>To support core app functionality, the app may locally store:</p>
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">2. Anonymous Usage Analytics</h2>
+          <p>
+            To help us improve app stability and user experience, we collect anonymous usage data, including:
+          </p>
           <ul class="list-disc pl-6 space-y-1">
-            <li>Countdown records and logs</li>
-            <li>Intervention history</li>
-            <li>User preferences & timer settings</li>
-            <li>Audio playback configurations</li>
-            <li>Statistics and personal success records</li>
+            <li>feature usage frequency</li>
+            <li>crash reports and performance data</li>
+            <li>general interaction behaviors (e.g., button taps, session duration)</li>
           </ul>
-          <p>This information remains exclusively on your device and is not accessible to the developer.</p>
+          <p>
+            This data is associated only with an anonymous identifier (UUID / IDFV) and cannot be used to identify you personally.
+          </p>
+          <p>
+            These analytics are uploaded securely to our server solely for product improvement and are never shared with advertisers or third parties.
+          </p>
 
-          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">3. Notification Permission</h2>
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">3. Local Storage</h2>
+          <p>To support app functionality, the app may locally store:</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>countdown records</li>
+            <li>intervention history</li>
+            <li>user preferences</li>
+            <li>audio playback settings</li>
+            <li>statistics and success records</li>
+          </ul>
+          <p>
+            This information remains on your device and is not accessible to the developer unless uploaded as part of anonymous analytics described above.
+          </p>
+
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">4. Notification Permission</h2>
           <p>The app may request notification permission in order to provide:</p>
           <ul class="list-disc pl-6 space-y-1">
-            <li>Countdown completion alerts</li>
-            <li>Intervention reminders</li>
+            <li>countdown reminders</li>
+            <li>intervention completion alerts</li>
+            <li>support for focus and self-control workflows</li>
           </ul>
           <p>Notifications are generated locally on your device. No personal information is collected through notification features.</p>
 
-          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">4. Background Audio</h2>
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">5. Background Audio</h2>
           <p>
             To support meditation guidance, white noise playback, and lock screen audio controls, the app may continue audio playback while running in the background. No personal data is collected or transmitted during audio playback.
           </p>
 
-          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">5. Third-Party Services</h2>
-          <p>This app currently does not integrate third-party advertising or analytics services.</p>
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">6. Third-Party Services</h2>
+          <p>This app currently does not integrate third-party advertising or tracking services.</p>
 
-          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">6. Contact</h2>
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">7. Children's Privacy</h2>
+          <p>This app does not knowingly collect personal information from children.</p>
+
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">8. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Updated versions will be published within the app or related pages.</p>
+
+          <h2 class="text-xl font-bold text-white border-l-4 border-blue-500 pl-3">9. Contact</h2>
           <p>
             If you have any questions about this Privacy Policy, please contact:
             <a href="mailto:zhuziwu8@gmail.com" class="text-blue-400 underline font-semibold ml-1">zhuziwu8@gmail.com</a>
@@ -85,10 +107,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <div class="prose prose-invert prose-slate max-w-none mt-8 text-slate-300 leading-relaxed space-y-6">
           <p>
-            欢迎使用「我忍住啦」。本应用是一款帮助用户进行饮食冲动管理与自我干预的本地离线应用。我们极其重视用户隐私，并尽可能减少任何数据收集行为。
+            欢迎使用「我忍住啦」。本应用是一款帮助用户进行饮食冲动管理与自我干预的本地应用。我们高度重视您的隐私，并尽可能减少数据收集。
           </p>
           <p>
-            本应用主要在您的设备本地运行，默认不会上传、共享或出售您的任何个人信息。
+            绝大多数数据均存储在您的设备本地。我们不会收集您的姓名、手机号、电子邮箱等个人身份信息。
           </p>
 
           <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">1. 数据收集说明</h3>
@@ -96,20 +118,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <ul class="list-disc pl-6 space-y-1">
             <li>不创建用户账户</li>
             <li>不要求用户登录</li>
-            <li>不收集个人身份信息</li>
-            <li>不上传用户数据到开发者服务器</li>
+            <li>不收集个人身份信息（如姓名、邮箱、手机号）</li>
             <li>不进行广告追踪</li>
             <li>不出售用户数据</li>
             <li>不使用第三方广告 SDK</li>
-            <li>不使用第三方统计分析 SDK</li>
           </ul>
 
-          <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">2. 本地数据存储</h3>
+          <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">2. 匿名使用数据分析</h3>
+          <p>为了持续优化产品体验与应用稳定性，我们会收集以下匿名使用数据：</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>功能使用频率</li>
+            <li>崩溃日志与性能数据</li>
+            <li>通用交互行为（如按钮点击、使用时长）</li>
+          </ul>
+          <p>这些数据仅与匿名设备标识（UUID / IDFV）关联，无法用于识别您的真实身份。相关数据会安全上传至我们的服务器，仅用于产品改进，不会用于广告投放，也不会共享给第三方。</p>
+
+          <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">3. 本地数据存储</h3>
           <p>
-            倒计时记录、干预历史、用户偏好设置、音频播放配置等仅保存在您的手机本地存储中。
+            倒计时记录、干预历史、用户偏好设置、音频播放配置、统计数据与成功记录仅存储于您的设备中；除非作为前述匿名分析数据的一部分上传，否则开发者无法访问。
           </p>
 
-          <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">3. 联系我们</h3>
+          <h3 class="text-lg font-bold text-white border-l-4 border-blue-500 pl-3">4. 联系我们</h3>
           <p>
             如果您对本隐私政策有任何疑问，请通过邮箱联系我们：
             <a href="mailto:zhuziwu8@gmail.com" class="text-blue-400 underline font-semibold ml-1">zhuziwu8@gmail.com</a>
