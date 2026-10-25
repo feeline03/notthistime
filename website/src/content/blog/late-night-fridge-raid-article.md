@@ -125,4 +125,4 @@ You don't have to rely on a promise made by a version of you who had more energy
 
 如果你厌倦了在深夜用意志力苦苦对抗冲动，让 Not This Time 的 3 分钟阻断机制陪你度过难关。
 
-👉 [立即在 App Store 下载 Not This Time](https://apps.apple.com/us/app/id6769012887)
+👉 [立即在 App Store 下载 Not This Time]([https://apps.apple.com/us/app/id6769012887](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8)
