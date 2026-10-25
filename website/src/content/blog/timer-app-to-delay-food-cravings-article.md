@@ -133,4 +133,4 @@ You don't need to be stronger. You need the right tool for the moment you're act
 
 Sick of battling late-night urges on willpower alone? Let Not This Time's 3-minute block get you through.
 
-👉 [Now Download Not This Time on the App Store]([https://apps.apple.com/us/app/id6769012887](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8))
+👉 [Now Download Not This Time on the App Store]([https://apps.apple.com/us/app/id6769012887](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8)
