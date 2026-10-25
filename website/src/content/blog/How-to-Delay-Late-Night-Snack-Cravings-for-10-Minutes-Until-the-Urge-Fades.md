@@ -122,4 +122,4 @@ You don't have to be stronger. You just have to press start.
 
 If you’re tired of fighting cravings with sheer willpower late at night, let Not This Time’s 3-minute interruption method see you through.
 
-👉 [On App Store Download Not This Time](https://apps.apple.com/us/app/id6769012887)
+👉 [On App Store Download Not This Time]([https://apps.apple.com/us/app/id6769012887](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8)
