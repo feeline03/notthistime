@@ -1,6 +1,6 @@
 # Not This Time (我忍住啦) - Official Website & SEO Blog
 
-The official website and behavioral science blog for **Not This Time** (iOS App: [App Store Link](https://apps.apple.com/app/6769012887)).
+The official website and behavioral science blog for **Not This Time** (iOS App: [App Store Link](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8)).
 
 Built with **Astro**, **Tailwind CSS**, and **Astro Content Collections**. Engineered for zero client-side JavaScript overhead, near-instant first paint, top Lighthouse scores, and robust search engine indexing.
 
