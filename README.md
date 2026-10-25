@@ -6,6 +6,16 @@ Built with **Astro**, **Tailwind CSS**, and **Astro Content Collections**. Engin
 
 ---
 
+## 📚 官网文档中心 (Website & Blog Documentation)
+
+所有关于官网与博客的运营、发文与架构指南均已集中整理在 [`docs/website/`](./docs/website/) 目录下：
+
+- 📖 **[发文与日常运维实操指南](./docs/website/01-BLOG_PUBLISHING_GUIDE.md)**：包含 GitHub 网页端 0 占用写作、即时发布 vs 未来定时发布、排版规范。
+- 🛠 **[系统架构与自动化部署说明](./docs/website/02-ARCHITECTURE_AND_DEPLOYMENT.md)**：包含 GitHub Pages 子路径与独立域名双模自适应、GitHub Actions CI/CD 与每日定时 Cron 巡检。
+- 🎯 **[SEO 架构与高转化漏斗机制](./docs/website/03-SEO_STRATEGY_AND_FUNNEL.md)**：包含 Schema 结构化数据、黄金长尾词选题策略与 App 转化漏斗设计。
+
+---
+
 ## 🚀 Features & Architecture
 
 - **Astro Static Site Generator:** 100% pre-rendered HTML for maximum speed and SEO crawlability.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feeline03.github.io/notthistime/sitemap.xml
