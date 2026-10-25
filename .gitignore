@@ -1,9 +1,12 @@
 # Build output
 dist/
 .astro/
+website/dist/
+website/.astro/
 
 # Dependencies
 node_modules/
+website/node_modules/
 .npm/
 
 # Environment and logs

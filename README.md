@@ -8,11 +8,11 @@ Built with **Astro**, **Tailwind CSS**, and **Astro Content Collections**. Engin
 
 ## 📚 官网文档中心 (Website & Blog Documentation)
 
-所有关于官网与博客的运营、发文与架构指南均已集中整理在 [`docs/website/`](./docs/website/) 目录下：
+所有关于官网与博客的运营、发文与架构指南均已集中整理在 [`website/docs/`](./website/docs/) 目录下：
 
-- 📖 **[发文与日常运维实操指南](./docs/website/01-BLOG_PUBLISHING_GUIDE.md)**：包含 GitHub 网页端 0 占用写作、即时发布 vs 未来定时发布、排版规范。
-- 🛠 **[系统架构与自动化部署说明](./docs/website/02-ARCHITECTURE_AND_DEPLOYMENT.md)**：包含 GitHub Pages 子路径与独立域名双模自适应、GitHub Actions CI/CD 与每日定时 Cron 巡检。
-- 🎯 **[SEO 架构与高转化漏斗机制](./docs/website/03-SEO_STRATEGY_AND_FUNNEL.md)**：包含 Schema 结构化数据、黄金长尾词选题策略与 App 转化漏斗设计。
+- 📖 **[发文与日常运维实操指南](./website/docs/01-BLOG_PUBLISHING_GUIDE.md)**：包含 GitHub 网页端 0 占用写作、即时发布 vs 未来定时发布、排版规范。
+- 🛠 **[系统架构与自动化部署说明](./website/docs/02-ARCHITECTURE_AND_DEPLOYMENT.md)**：包含 GitHub Pages 子路径与独立域名双模自适应、GitHub Actions CI/CD 与每日定时 Cron 巡检。
+- 🎯 **[SEO 架构与高转化漏斗机制](./website/docs/03-SEO_STRATEGY_AND_FUNNEL.md)**：包含 Schema 结构化数据、黄金长尾词选题策略与 App 转化漏斗设计。
 
 ---
 
@@ -26,7 +26,7 @@ Built with **Astro**, **Tailwind CSS**, and **Astro Content Collections**. Engin
   - Dynamic Open Graph cards, Twitter summary tags, and canonical links on all pages.
   - JSON-LD Structured Data: `SoftwareApplication`, `FAQPage`, and `BlogPosting`.
   - Automatic `sitemap-index.xml` and `sitemap-0.xml` generation via `@astrojs/sitemap`.
-- **Markdown / Content Collections:** Type-safe blog management with frontmatter validation in `src/content/config.ts`.
+- **Markdown / Content Collections:** Type-safe blog management with frontmatter validation in `website/src/content/config.ts`.
 - **High-Conversion Funnel Design:** Integrated App Store CTA blocks with app screenshots across home and blog articles.
 - **Automated CI/CD:** Push to `main` automatically triggers GitHub Actions to build and publish to GitHub Pages.
 
@@ -35,6 +35,9 @@ Built with **Astro**, **Tailwind CSS**, and **Astro Content Collections**. Engin
 ## 🛠 Local Development
 
 ```bash
+# Navigate to website directory
+cd website
+
 # Install dependencies
 npm install
 
@@ -51,6 +54,7 @@ npm run preview
 ### Testing Custom Domain Mode Locally
 
 ```bash
+cd website
 CUSTOM_DOMAIN=true npm run build
 ```
 
@@ -58,8 +62,8 @@ CUSTOM_DOMAIN=true npm run build
 
 ## ✍️ How to Publish New Blog Posts
 
-1. Create a new `.md` file inside `src/content/blog/`, for example:
-   `src/content/blog/my-new-article.md`
+1. Create a new `.md` file inside `website/src/content/blog/` (directly via GitHub Web UI or locally), for example:
+   `website/src/content/blog/my-new-article.md`
 
 2. Include frontmatter at the top:
    ```markdown

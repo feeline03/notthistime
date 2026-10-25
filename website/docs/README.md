@@ -16,7 +16,7 @@
 
 ## ⚡ 极速操作入口
 
-* **在线发布新文章**：[直接进入 GitHub 文章目录](https://github.com/feeline03/notthistime/tree/main/src/content/blog) ➔ 点击 `Add file` ➔ `Create new file`。
+* **在线发布新文章**：[直接进入 GitHub 文章目录](https://github.com/feeline03/notthistime/tree/main/website/src/content/blog) ➔ 点击 `Add file` ➔ `Create new file`。
 * **查看线上博客列表**：[https://feeline03.github.io/notthistime/blog](https://feeline03.github.io/notthistime/blog)
 * **查看线上官网首页**：[https://feeline03.github.io/notthistime/](https://feeline03.github.io/notthistime/)
 * **查看 GitHub Actions 部署日志**：[https://github.com/feeline03/notthistime/actions](https://github.com/feeline03/notthistime/actions)

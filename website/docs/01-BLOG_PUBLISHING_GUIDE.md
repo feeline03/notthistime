@@ -11,7 +11,7 @@
 ### 第一步：在 GitHub 网页新建文章
 
 1. 浏览器打开博文存放目录：  
-   👉 **[点击进入 GitHub 文章目录](https://github.com/feeline03/notthistime/tree/main/src/content/blog)**
+   👉 **[点击进入 GitHub 文章目录](https://github.com/feeline03/notthistime/tree/main/website/src/content/blog)**
 2. 点击右上角 **`Add file` ➔ `Create new file`**。
 3. **命名规范**：
    - 英文小写，用连字符 `-` 连接，必须以 `.md` 结尾。
