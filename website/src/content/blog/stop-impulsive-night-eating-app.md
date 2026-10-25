@@ -3,9 +3,9 @@ title: "Apps to Stop Impulsive Eating at Night: Timer vs Trackers"
 description: "Looking for an app or timer that helps stop impulsive eating at night? Compare habit trackers, blockers and timer tools, and which fits a 3-minute urge."
 category: "Habits & Tools"
 pubDate: "2026-10-30"
-readingtime: "7 min read"
+readingTime: "7 min read"
 author: "Not This Time Team"
-tags: ["impulsive eating at night, food timer app, timer delay app, late night snacking, habit tracker alternatives, 3 minute timer"]
+tags: ["impulsive eating at night", "food timer app", "timer delay app", "late night snacking", "habit tracker alternatives", "3 minute timer"]
 ---
 
 It's 11:52pm. The kitchen light is off, but the fridge light is doing its job. You've got your phone in one hand, and you typed something like "any app or timer that helps stop impulsive eating at night" because the app you already have, the one with the streak counter and the daily check-in, is showing a streak you broke on Tuesday.

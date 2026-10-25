@@ -2,10 +2,10 @@
 title: "How to Stop Late Night Binge Eating When You're Bored"
 description: "A practical, no-pressure way to stop late night binge eating when you're bored: a three-minute delay routine you can start from your phone tonight."
 pubDate: "2026-11-01"
-readingtime: "7 min read"
+readingTime: "7 min read"
 category: "Late-Night Urges"
 author: "Not This Time Team"
-tags: ["late night binge eating, bored eating, night cravings, 3 minute urge, stop snacking at night, bedtime routine"]
+tags: ["late night binge eating", "bored eating", "night cravings", "3 minute urge", "stop snacking at night", "bedtime routine"]
 ---
 
 It's 10:50pm. The show ended twenty minutes ago and you're still on the couch, phone in hand, scrolling nothing in particular. You're not starving. You're bored, and the kitchen is about eleven steps away.
@@ -90,7 +90,7 @@ If you'd like a starting point, try it tonight: open the app while you're still 
 
 Open Not This Time before you open the pantry. Start the countdown, let the ticking fill the room, and see how you feel when it ends. If you're still wondering how to stop late night binge eating when you're bored, this is a small, low-effort way to find out.
 
-👉 [Download Not This Time on the App Store](https://apps.apple.com/us/app/id6769012887)
+👉 [Download Not This Time on the App Store](https://apps.apple.com/app/apple-store/id6769012887?pt=128462891&ct=official_website&mt=8)
 
 ---
 

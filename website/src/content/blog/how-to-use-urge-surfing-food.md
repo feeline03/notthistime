@@ -3,9 +3,9 @@ title: "How to Use Urge Surfing for Food Cravings in 3 Minutes"
 description: "How to use urge surfing for food cravings, how it actually works in practice, and tricks to delay a late-night snack for 10 minutes with a 3-minute timer."
 category: "Late-Night Urges"
 pubDate: "2026-10-31"
-readingtime: "7 min read"
+readingTime: "7 min read"
 author: "Not This Time Team"
-tags: ["urge surfing for food, how to use urge surfing, food cravings, delay late night snacking, 3 minute timer"]
+tags: ["urge surfing for food", "how to use urge surfing", "food cravings", "delay late night snacking", "3 minute timer"]
 ---
 
 It's 12:10am. The snack is in your hand, or close enough, and you're searching how to use urge surfing for food cravings because "just say no" has already failed twice tonight. You're not starving. Dinner was hours ago. Something just wants a crunchy thing, right now.

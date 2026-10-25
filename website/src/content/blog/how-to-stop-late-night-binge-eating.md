@@ -2,10 +2,10 @@
 title: "Late Night Cravings Guide: How To Stop Cravings For Food Reddit (2026)"
 description: "A practical, no-pressure way to stop late night binge eating when you're bored: a three-minute delay routine you can start from your phone tonight."
 pubDate: "2026-11-02"
-readingtime: "7 min read"
+readingTime: "7 min read"
 category: "Late-Night Urges" 
 author: "Not This Time Team"
-tags: ["late night binge eating, bored eating, night cravings, 3 minute urge, stop snacking at night, bedtime routine"]
+tags: ["late night binge eating", "bored eating", "night cravings", "3 minute urge", "stop snacking at night", "bedtime routine"]
 ---
 
 It's 10:50pm. The show ended twenty minutes ago and you're still on the couch, phone in hand, scrolling nothing in particular. You're not starving. You're bored, and the kitchen is about eleven steps away.

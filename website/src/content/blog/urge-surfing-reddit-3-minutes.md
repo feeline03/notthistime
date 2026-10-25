@@ -3,9 +3,9 @@ title: "Urge Surfing Reddit Search? Try This 3-Minute Version"
 description: "Urge surfing reddit threads are long. Here's a 3-minute version: tricks to delay a late-night snack for 10 minutes and a timer to ride out the urge."
 category: "Late-Night Urges"
 pubDate: "2026-11-03"
-readingtime: "7 min read"
+readingTime: "7 min read"
 author: "Not This Time Team"
-tags: ["urge surfing, late night snacking, craving pause, delay snacking, 3 minute timer"]
+tags: ["urge surfing", "late night snacking", "craving pause", "delay snacking", "3 minute timer"]
 ---
 
 It's 11:40pm. You searched urge surfing reddit because the pantry door is open and your hand already knows where the chips are. You're not hungry, exactly. Dinner was at 7. But the thought has been circling for ten minutes, and now you're reading a thread instead of closing the door.
